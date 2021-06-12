@@ -70,6 +70,11 @@ module_t right_modules[] = {
 			.iconsize = 16,
 		},
 	},
+	{ /* mpd */
+		.mpd = {
+			.func = mpd
+		},
+	},
 	{ /* cpu usage */
 		.cpu = {
 			.func = cpugraph,

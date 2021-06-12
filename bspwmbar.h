@@ -123,6 +123,10 @@ typedef struct {
 
 typedef struct {
 	MODULE_BASE;
+} module_mpd_t;
+
+typedef struct {
+	MODULE_BASE;
 
 	char *prefix_1;
 	char *prefix_2;
@@ -137,6 +141,7 @@ typedef struct {
 
 union _module_t {
 	module_any_t any;
+	module_mpd_t mpd;
 	module_systray_t tray;
 	module_datetime_t date;
 	module_filesystem_t fs;
@@ -181,6 +186,7 @@ void memgraph(draw_context_t *, module_option_t *);
 void systray(draw_context_t *, module_option_t *);
 void battery(draw_context_t *, module_option_t *);
 void backlight(draw_context_t *, module_option_t *);
+void mpd(draw_context_t *, module_option_t *);
 
 /* temporary buffer */
 extern char buf[1024];
