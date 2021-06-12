@@ -28,9 +28,7 @@ mpd_connect()
 	}
 
 	if (mpd_connection_get_error(conn) != MPD_ERROR_SUCCESS) {
-		const char *msg = mpd_connection_get_error_message(conn);
 		mpd_disconnect();
-		die(msg);
 	}
 }
 
@@ -57,6 +55,10 @@ void mpd(draw_context_t *dc, module_option_t *opts)
 {
 	if (!conn) {
 		mpd_connect();
+	}
+
+	if (mpd_connection_get_error(conn) != MPD_ERROR_SUCCESS) {
+		return;
 	}
 
 	if (mpd_send_current_song(conn)) {
