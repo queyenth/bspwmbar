@@ -6,8 +6,8 @@ VERSION="${TAG:-0.6.2}"
 PREFIX=/usr/local
 
 PKGCONFIG='pkg-config'
-DEPS='xcb xcb-ewmh xcb-util xcb-randr xcb-shm xcb-renderutil cairo harfbuzz fontconfig libmpdclient'
-MODS='bspwm cpu memory disk thermal datetime battery backlight mpd'
+DEPS='xcb xcb-ewmh xcb-util xcb-randr xcb-shm xcb-renderutil cairo harfbuzz fontconfig libmpdclient xkbfile x11'
+MODS='bspwm cpu memory disk thermal datetime battery backlight mpd xkb'
 
 # debug flags
 CFLAGS='-Os -Wall -Wextra -pedantic -pipe -fstack-protector-strong -fno-plt -DNDEBUG'

@@ -75,6 +75,11 @@ module_t right_modules[] = {
 			.func = mpd
 		},
 	},
+	{ /* xkb */
+		.xkb = {
+			.func = xkb
+		},
+	},
 	{ /* cpu usage */
 		.cpu = {
 			.func = cpugraph,
